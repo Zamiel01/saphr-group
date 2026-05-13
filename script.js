@@ -234,3 +234,106 @@ if (mobileMenuBtn && navLinks) {
         });
     });
 }
+
+// View Packages Button - Scroll to Pricing Section
+const viewPackagesBtn = document.querySelector('.btn-outline');
+if (viewPackagesBtn) {
+    viewPackagesBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const pricingSection = document.getElementById('pricing');
+        if (pricingSection) {
+            pricingSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+}
+
+// Social Media Links - Open in new tab
+document.querySelectorAll('.footer-social a').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const platform = link.getAttribute('aria-label');
+        let url = '#';
+        
+        switch(platform) {
+            case 'Facebook':
+                url = 'https://facebook.com/saphirgroup';
+                break;
+            case 'Instagram':
+                url = 'https://instagram.com/saphirgroup';
+                break;
+            case 'WhatsApp':
+                url = 'https://wa.me/237694658769';
+                break;
+        }
+        
+        if (url !== '#') {
+            window.open(url, '_blank');
+        } else {
+            alert('Social media link coming soon!');
+        }
+    });
+});
+
+// Get Directions Button - Open Google Maps
+const directionsBtn = document.querySelector('.map-directions');
+if (directionsBtn) {
+    directionsBtn.addEventListener('click', (e) => {
+        // The link already has href, but let's make sure it opens properly
+        const href = directionsBtn.getAttribute('href');
+        if (href && href !== '#') {
+            window.open(href, '_blank');
+        }
+    });
+}
+
+// Footer Quick Links - Ensure smooth scroll
+document.querySelectorAll('.footer-links a').forEach(link => {
+    link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#')) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    });
+});
+
+// Home Button - Scroll to top
+document.querySelectorAll('a[href="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+        const text = link.textContent.trim();
+        if (text === 'Home' || text === 'Accueil') {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Add hover effects to all buttons for better UX
+document.querySelectorAll('button, .btn-filled, .btn-outline, .pricing-btn').forEach(btn => {
+    btn.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-2px)';
+    });
+    
+    btn.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+    });
+});
+
+// Loading animation for images
+document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('load', function() {
+        this.classList.add('loaded');
+    });
+});
