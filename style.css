@@ -62,6 +62,46 @@ body {
 
 .btn-nav:hover { background: var(--accent); color: white; }
 
+/* Language Switcher */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    color: var(--text-main);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.lang-btn.active {
+    color: var(--accent);
+    background: rgba(196, 140, 93, 0.1);
+}
+
+.lang-btn:hover {
+    color: var(--accent);
+}
+
+.lang-divider {
+    color: var(--text-main);
+    opacity: 0.3;
+    font-size: 0.9rem;
+}
+
 /* Mobile Menu Button (hidden on desktop) */
 .mobile-menu-btn {
     display: none;
@@ -1416,6 +1456,18 @@ p {
     }
     .desktop-only { display: none; }
     .btn-nav { padding: 8px 16px; font-size: 0.8rem; }
+    
+    /* Language switcher mobile */
+    .nav-right {
+        gap: 10px;
+    }
+    .lang-btn {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+    .lang-divider {
+        font-size: 0.8rem;
+    }
 
     /* --- Hero --- */
     .hero-container {

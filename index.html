@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,14 +22,21 @@
 <nav class="navbar">
         <div class="logo">SAPHIR<span>GROUP</span></div>
         <ul class="nav-links" id="navLinks">
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#pricing">Packages</a></li>
-            <li><a href="#location">Location</a></li>
-            <li><a href="#booking">Book Now</a></li>
+            <li><a href="#" data-i18n="nav_home">Home</a></li>
+            <li><a href="#about" data-i18n="nav_about">About</a></li>
+            <li><a href="#gallery" data-i18n="nav_gallery">Gallery</a></li>
+            <li><a href="#pricing" data-i18n="nav_packages">Packages</a></li>
+            <li><a href="#location" data-i18n="nav_location">Location</a></li>
+            <li><a href="#booking" data-i18n="nav_book">Book Now</a></li>
         </ul>
-        <a href="tel:694658769" class="btn-nav desktop-only">694 658 769</a>
+        <div class="nav-right">
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="fr">FR</button>
+                <span class="lang-divider">|</span>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+            <a href="tel:694658769" class="btn-nav desktop-only" data-i18n="nav_phone">694 658 769</a>
+        </div>
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
             <i class="fas fa-bars"></i>
         </button>
@@ -37,27 +44,27 @@
 
 <section class="hero-container">
         <div class="hero-content">
-            <h1 class="reveal-text">Create Magical <br>Memories With Us</h1>
-            <p class="fade-in">Transform your special occasions into extraordinary celebrations. From weddings to corporate events, our elegant halls provide the perfect setting with VIP decoration, professional sound systems, and full-service catering for 250-400 guests.</p>
+            <h1 class="reveal-text" data-i18n="hero_title">Create Magical <br>Memories With Us</h1>
+            <p class="fade-in" data-i18n="hero_subtitle">Transform your special occasions into extraordinary celebrations. From weddings to corporate events, our elegant halls provide the perfect setting with VIP decoration, professional sound systems, and full-service catering for 250-400 guests.</p>
             
             <div class="cta-group fade-in">
-                <a href="tel:694658769" class="btn-filled">Book Now</a>
-                <a href="#" class="btn-outline">View Packages</a>
+                <a href="tel:694658769" class="btn-filled" data-i18n="hero_book">Book Now</a>
+                <a href="#" class="btn-outline" data-i18n="hero_packages">View Packages</a>
             </div>
 
             <div class="info-footer fade-in">
                 <div class="info-item">
                     <i class="fas fa-phone icon"></i>
                     <div>
-                        <strong>CONTACT WILLIAM</strong>
-                        <p>694 658 769</p>
+                        <strong data-i18n="hero_contact">CONTACT WILLIAM</strong>
+                        <p data-i18n="nav_phone">694 658 769</p>
                     </div>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-users icon"></i>
                     <div>
-                        <strong>CAPACITY</strong>
-                        <p>250 - 400 Guests</p>
+                        <strong data-i18n="hero_capacity">CAPACITY</strong>
+                        <p data-i18n="hero_guests">250 - 400 Guests</p>
                     </div>
                 </div>
             </div>
@@ -83,24 +90,24 @@
     <section class="about-section" id="about">
         <div class="about-container">
             <div class="about-content">
-                <h2 class="about-title reveal-text">About Saphir Group</h2>
+                <h2 class="about-title reveal-text" data-i18n="about_title">About Saphir Group</h2>
                 <div class="about-text">
-                    <p class="fade-in">Located in Makepe, Douala, Saphir Group is your premier destination for luxury event planning. We specialize in creating memorable weddings, birthday celebrations, and corporate events in our elegant reception hall.</p>
-                    <p class="fade-in">Our experienced team ensures stress-free, perfectly executed events with personalized decoration, custom catering, and professional photo & video coverage. Every detail is carefully planned to transform your vision into reality.</p>
-                    <p class="fade-in">With capacity for 250-400 guests, our modern venue combines elegance with functionality, providing the perfect backdrop for your most precious moments.</p>
+                    <p class="fade-in" data-i18n="about_p1">Located in Makepe, Douala, Saphir Group is your premier destination for luxury event planning. We specialize in creating memorable weddings, birthday celebrations, and corporate events in our elegant reception hall.</p>
+                    <p class="fade-in" data-i18n="about_p2">Our experienced team ensures stress-free, perfectly executed events with personalized decoration, custom catering, and professional photo & video coverage. Every detail is carefully planned to transform your vision into reality.</p>
+                    <p class="fade-in" data-i18n="about_p3">With capacity for 250-400 guests, our modern venue combines elegance with functionality, providing the perfect backdrop for your most precious moments.</p>
                 </div>
                 <div class="about-stats">
                     <div class="stat-item">
                         <span class="stat-number">250+</span>
-                        <span class="stat-label">Events Hosted</span>
+                        <span class="stat-label" data-i18n="about_stat1">Events Hosted</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">400</span>
-                        <span class="stat-label">Guest Capacity</span>
+                        <span class="stat-label" data-i18n="about_stat2">Guest Capacity</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">100%</span>
-                        <span class="stat-label">Satisfaction</span>
+                        <span class="stat-label" data-i18n="about_stat3">Satisfaction</span>
                     </div>
                 </div>
             </div>
@@ -113,8 +120,8 @@
     <!-- Gallery Section -->
     <section class="gallery-section" id="gallery">
         <div class="gallery-header">
-            <h2 class="gallery-title reveal-text">Our Beautiful Moments</h2>
-            <p class="gallery-subtitle fade-in">Experience the elegance and luxury of our event spaces</p>
+            <h2 class="gallery-title reveal-text" data-i18n="gallery_title">Our Beautiful Moments</h2>
+            <p class="gallery-subtitle fade-in" data-i18n="gallery_subtitle">Experience the elegance and luxury of our event spaces</p>
         </div>
 
         <div class="gallery-grid">
@@ -296,125 +303,125 @@
     <!-- Pricing Section -->
     <section class="pricing-section" id="pricing">
         <div class="pricing-header">
-            <h2 class="pricing-title reveal-text">Our Packages</h2>
-            <p class="pricing-subtitle fade-in">Choose the perfect package for your special event</p>
+            <h2 class="pricing-title reveal-text" data-i18n="pricing_title">Our Packages</h2>
+            <p class="pricing-subtitle fade-in" data-i18n="pricing_subtitle">Choose the perfect package for your special event</p>
         </div>
 
         <div class="pricing-grid">
             <!-- Basic 01 -->
             <div class="pricing-card" data-aos="fade-up" data-aos-delay="0">
                 <div class="pricing-card-header">
-                    <h3>Basic 01</h3>
+                    <h3 data-i18n="pricing_basic01_name">Basic 01</h3>
                     <div class="price">
-                        <span class="currency">FCFA</span>
-                        <span class="amount">2,500,000</span>
+                        <span class="currency" data-i18n="pricing_currency">FCFA</span>
+                        <span class="amount" data-i18n="pricing_basic01_price">2,500,000</span>
                     </div>
-                    <p class="guests">250 - 400 guests</p>
+                    <p class="guests" data-i18n="pricing_basic01_guests">250 - 400 guests</p>
                 </div>
                 <div class="pricing-card-image">
                     <img src="gallery/WhatsApp Image 2026-05-12 at 2.52.50 PM.jpeg" alt="Basic Package">
                 </div>
                 <ul class="pricing-features">
-                    <li><i class="fas fa-check"></i> Hall rental</li>
-                    <li><i class="fas fa-check"></i> Standard setup (tables & chairs)</li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_basic01_feature1">Hall rental</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_basic01_feature2">Standard setup (tables & chairs)</span></li>
                 </ul>
-                <a href="tel:694658769" class="pricing-btn">Book Now</a>
+                <a href="tel:694658769" class="pricing-btn" data-i18n="pricing_book">Book Now</a>
             </div>
 
             <!-- Basic 02 -->
             <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="pricing-card-header">
-                    <h3>Basic 02</h3>
+                    <h3 data-i18n="pricing_basic02_name">Basic 02</h3>
                     <div class="price">
-                        <span class="currency">FCFA</span>
-                        <span class="amount">3,500,000</span>
+                        <span class="currency" data-i18n="pricing_currency">FCFA</span>
+                        <span class="amount" data-i18n="pricing_basic02_price">3,500,000</span>
                     </div>
-                    <p class="guests">280 - 400 guests</p>
+                    <p class="guests" data-i18n="pricing_basic02_guests">280 - 400 guests</p>
                 </div>
                 <div class="pricing-card-image">
                     <img src="gallery/WhatsApp Image 2026-05-12 at 2.52.51 PM.jpeg" alt="Basic 02 Package">
                 </div>
                 <ul class="pricing-features">
-                    <li><i class="fas fa-check"></i> Reception hall</li>
-                    <li><i class="fas fa-check"></i> Complete setup</li>
-                    <li><i class="fas fa-check"></i> VIP decoration</li>
-                    <li><i class="fas fa-check"></i> Marble & glass tables</li>
-                    <li><i class="fas fa-check"></i> Professional DJ</li>
-                    <li><i class="fas fa-check"></i> Complete sound system</li>
-                    <li><i class="fas fa-check"></i> Security</li>
-                    <li><i class="fas fa-check"></i> Generator technician</li>
-                    <li><i class="fas fa-check"></i> Secure parking</li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_basic02_feature1">Reception hall</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_basic02_feature2">Complete setup</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_basic02_feature3">VIP decoration</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_basic02_feature4">Marble & glass tables</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_basic02_feature5">Professional DJ</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_basic02_feature6">Complete sound system</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_basic02_feature7">Security</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_basic02_feature8">Generator technician</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_basic02_feature9">Secure parking</span></li>
                 </ul>
-                <a href="tel:694658769" class="pricing-btn">Book Now</a>
+                <a href="tel:694658769" class="pricing-btn" data-i18n="pricing_book">Book Now</a>
             </div>
 
             <!-- All-Inclusive -->
             <div class="pricing-card popular" data-aos="fade-up" data-aos-delay="200">
-                <div class="popular-badge">Most Popular</div>
+                <div class="popular-badge" data-i18n="pricing_allinclusive_badge">Most Popular</div>
                 <div class="pricing-card-header">
-                    <h3>All-Inclusive</h3>
+                    <h3 data-i18n="pricing_allinclusive_name">All-Inclusive</h3>
                     <div class="price">
-                        <span class="currency">FCFA</span>
-                        <span class="amount">25,000</span>
-                        <span class="per">/guest</span>
+                        <span class="currency" data-i18n="pricing_currency">FCFA</span>
+                        <span class="amount" data-i18n="pricing_allinclusive_price">25,000</span>
+                        <span class="per" data-i18n="pricing_allinclusive_per">/guest</span>
                     </div>
-                    <p class="guests">250 - 400 guests</p>
+                    <p class="guests" data-i18n="pricing_allinclusive_guests">250 - 400 guests</p>
                 </div>
                 <div class="pricing-card-image">
                     <img src="gallery/WhatsApp Image 2026-05-12 at 2.52.48 PM.jpeg" alt="All-Inclusive Package">
                 </div>
                 <ul class="pricing-features">
-                    <li><i class="fas fa-check"></i> Reception hall</li>
-                    <li><i class="fas fa-check"></i> Complete setup</li>
-                    <li><i class="fas fa-check"></i> VIP decoration</li>
-                    <li><i class="fas fa-check"></i> Marble & glass tables</li>
-                    <li><i class="fas fa-check"></i> Professional DJ</li>
-                    <li><i class="fas fa-check"></i> Complete sound system</li>
-                    <li><i class="fas fa-check"></i> Catering service</li>
-                    <li><i class="fas fa-check"></i> Security</li>
-                    <li><i class="fas fa-check"></i> Generator technician</li>
-                    <li><i class="fas fa-check"></i> Secure parking</li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_allinclusive_feature1">Reception hall</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_allinclusive_feature2">Complete setup</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_allinclusive_feature3">VIP decoration</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_allinclusive_feature4">Marble & glass tables</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_allinclusive_feature5">Professional DJ</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_allinclusive_feature6">Complete sound system</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_allinclusive_feature7">Catering service</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_allinclusive_feature8">Security</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_allinclusive_feature9">Generator technician</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_allinclusive_feature10">Secure parking</span></li>
                 </ul>
-                <a href="tel:694658769" class="pricing-btn pricing-btn-popular">Book Now</a>
+                <a href="tel:694658769" class="pricing-btn pricing-btn-popular" data-i18n="pricing_book">Book Now</a>
             </div>
 
             <!-- VIP -->
             <div class="pricing-card vip" data-aos="fade-up" data-aos-delay="300">
-                <div class="vip-badge">VIP</div>
+                <div class="vip-badge" data-i18n="pricing_vip_badge">VIP</div>
                 <div class="pricing-card-header">
-                    <h3>VIP Experience</h3>
+                    <h3 data-i18n="pricing_vip_name">VIP Experience</h3>
                     <div class="price">
-                        <span class="currency">FCFA</span>
-                        <span class="amount">30,000</span>
-                        <span class="per">/guest</span>
+                        <span class="currency" data-i18n="pricing_currency">FCFA</span>
+                        <span class="amount" data-i18n="pricing_vip_price">30,000</span>
+                        <span class="per" data-i18n="pricing_vip_per">/guest</span>
                     </div>
-                    <p class="guests">250 - 400 guests</p>
+                    <p class="guests" data-i18n="pricing_vip_guests">250 - 400 guests</p>
                 </div>
                 <div class="pricing-card-image">
                     <img src="gallery/WhatsApp Image 2026-05-12 at 2.52.46 PM (3).jpeg" alt="VIP Package">
                 </div>
                 <ul class="pricing-features">
-                    <li><i class="fas fa-check"></i> Wedding planner</li>
-                    <li><i class="fas fa-check"></i> Reception hall</li>
-                    <li><i class="fas fa-check"></i> Complete setup</li>
-                    <li><i class="fas fa-check"></i> VIP decoration & signage</li>
-                    <li><i class="fas fa-check"></i> VIP & standard tables</li>
-                    <li><i class="fas fa-check"></i> Professional DJ</li>
-                    <li><i class="fas fa-check"></i> Complete sound system</li>
-                    <li><i class="fas fa-check"></i> Catering service</li>
-                    <li><i class="fas fa-check"></i> Security</li>
-                    <li><i class="fas fa-check"></i> Generator technician</li>
-                    <li><i class="fas fa-check"></i> Secure parking</li>
-                    <li><i class="fas fa-check"></i> Photo & video coverage</li>
-                    <li><i class="fas fa-check"></i> Heavy smoke effects</li>
-                    <li><i class="fas fa-check"></i> Fireworks</li>
-                    <li><i class="fas fa-check"></i> Ceremony cake</li>
-                    <li><i class="fas fa-check"></i> 2 decorated vehicles</li>
-                    <li><i class="fas fa-check"></i> MC (Master of Ceremony)</li>
-                    <li><i class="fas fa-check"></i> Piano bar & guest artists</li>
-                    <li><i class="fas fa-check"></i> Invitations</li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_vip_feature1">Wedding planner</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_vip_feature2">Reception hall</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_vip_feature3">Complete setup</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_vip_feature4">VIP decoration & signage</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_vip_feature5">VIP & standard tables</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_vip_feature6">Professional DJ</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_vip_feature7">Complete sound system</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_vip_feature8">Catering service</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_vip_feature9">Security</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_vip_feature10">Generator technician</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_vip_feature11">Secure parking</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_vip_feature12">Photo & video coverage</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_vip_feature13">Heavy smoke effects</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_vip_feature14">Fireworks</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_vip_feature15">Ceremony cake</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_vip_feature16">2 decorated vehicles</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_vip_feature17">MC (Master of Ceremony)</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_vip_feature18">Piano bar & guest artists</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pricing_vip_feature19">Invitations</span></li>
                 </ul>
-                <a href="tel:694658769" class="pricing-btn pricing-btn-vip">Book Now</a>
+                <a href="tel:694658769" class="pricing-btn pricing-btn-vip" data-i18n="pricing_book">Book Now</a>
             </div>
         </div>
     </section>
@@ -423,80 +430,80 @@
     <section class="booking-section" id="booking">
         <div class="booking-container">
             <div class="booking-content">
-                <h2 class="booking-title reveal-text">Book Your Event</h2>
-                <p class="booking-subtitle fade-in">Fill out the form below and we'll get back to you within 24 hours</p>
+                <h2 class="booking-title reveal-text" data-i18n="booking_title">Book Your Event</h2>
+                <p class="booking-subtitle fade-in" data-i18n="booking_subtitle">Fill out the form below and we'll get back to you within 24 hours</p>
                 
                 <form class="booking-form" id="bookingForm">
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="fullName">Full Name</label>
-                            <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
+                            <label for="fullName" data-i18n="form_fullname">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" data-i18n="form_fullname_placeholder" placeholder="Your full name" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                            <label for="email" data-i18n="form_email">Email Address</label>
+                            <input type="email" id="email" name="email" data-i18n="form_email_placeholder" placeholder="your@email.com" required>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="694 658 769" required>
+                            <label for="phone" data-i18n="form_phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" data-i18n="form_phone_placeholder" placeholder="694 658 769" required>
                         </div>
                         <div class="form-group">
-                            <label for="eventType">Event Type</label>
+                            <label for="eventType" data-i18n="form_event_type">Event Type</label>
                             <select id="eventType" name="eventType" required>
-                                <option value="" disabled selected>Select event type</option>
-                                <option value="wedding">Wedding</option>
-                                <option value="birthday">Birthday Party</option>
-                                <option value="corporate">Corporate Event</option>
-                                <option value="anniversary">Anniversary</option>
-                                <option value="graduation">Graduation</option>
-                                <option value="other">Other</option>
+                                <option value="" disabled selected data-i18n="form_event_select">Select event type</option>
+                                <option value="wedding" data-i18n="form_event_wedding">Wedding</option>
+                                <option value="birthday" data-i18n="form_event_birthday">Birthday Party</option>
+                                <option value="corporate" data-i18n="form_event_corporate">Corporate Event</option>
+                                <option value="anniversary" data-i18n="form_event_anniversary">Anniversary</option>
+                                <option value="graduation" data-i18n="form_event_graduation">Graduation</option>
+                                <option value="other" data-i18n="form_event_other">Other</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="eventDate">Event Date</label>
+                            <label for="eventDate" data-i18n="form_date">Event Date</label>
                             <input type="date" id="eventDate" name="eventDate" required>
                         </div>
                         <div class="form-group">
-                            <label for="guestCount">Number of Guests</label>
+                            <label for="guestCount" data-i18n="form_guests">Number of Guests</label>
                             <select id="guestCount" name="guestCount" required>
-                                <option value="" disabled selected>Select range</option>
-                                <option value="250-300">250 - 300 guests</option>
-                                <option value="300-350">300 - 350 guests</option>
-                                <option value="350-400">350 - 400 guests</option>
+                                <option value="" disabled selected data-i18n="form_guests_select">Select range</option>
+                                <option value="250-300" data-i18n="form_guests_250_300">250 - 300 guests</option>
+                                <option value="300-350" data-i18n="form_guests_300_350">300 - 350 guests</option>
+                                <option value="350-400" data-i18n="form_guests_350_400">350 - 400 guests</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="package">Preferred Package</label>
+                            <label for="package" data-i18n="form_package">Preferred Package</label>
                             <select id="package" name="package" required>
-                                <option value="" disabled selected>Select a package</option>
-                                <option value="basic01">Basic 01 - 2,500,000 FCFA</option>
-                                <option value="basic02">Basic 02 - 3,500,000 FCFA</option>
-                                <option value="allinclusive">All-Inclusive - 25,000 FCFA/guest</option>
-                                <option value="vip">VIP Experience - 30,000 FCFA/guest</option>
+                                <option value="" disabled selected data-i18n="form_package_select">Select a package</option>
+                                <option value="basic01" data-i18n="form_package_basic01">Basic 01 - 2,500,000 FCFA</option>
+                                <option value="basic02" data-i18n="form_package_basic02">Basic 02 - 3,500,000 FCFA</option>
+                                <option value="allinclusive" data-i18n="form_package_allinclusive">All-Inclusive - 25,000 FCFA/guest</option>
+                                <option value="vip" data-i18n="form_package_vip">VIP Experience - 30,000 FCFA/guest</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="budget">Estimated Budget (FCFA)</label>
-                            <input type="number" id="budget" name="budget" placeholder="e.g., 5000000">
+                            <label for="budget" data-i18n="form_budget">Estimated Budget (FCFA)</label>
+                            <input type="number" id="budget" name="budget" data-i18n="form_budget_placeholder" placeholder="e.g., 5000000">
                         </div>
                     </div>
 
                     <div class="form-group full-width">
-                        <label for="message">Additional Details</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Tell us more about your event, special requests, or questions..."></textarea>
+                        <label for="message" data-i18n="form_message">Additional Details</label>
+                        <textarea id="message" name="message" rows="4" data-i18n="form_message_placeholder" placeholder="Tell us more about your event, special requests, or questions..."></textarea>
                     </div>
 
                     <button type="submit" class="booking-submit">
-                        <span>Send Booking Request</span>
+                        <span data-i18n="form_submit">Send Booking Request</span>
                         <i class="fas fa-paper-plane"></i>
                     </button>
                 </form>
@@ -506,37 +513,37 @@
                     <div class="success-icon">
                         <i class="fas fa-check-circle"></i>
                     </div>
-                    <h3>Thank You!</h3>
-                    <p>Your booking request has been received. We'll contact you within 24 hours.</p>
-                    <button class="booking-reset" onclick="resetForm()">Send Another Request</button>
+                    <h3 data-i18n="success_title">Thank You!</h3>
+                    <p data-i18n="success_message">Your booking request has been received. We'll contact you within 24 hours.</p>
+                    <button class="booking-reset" onclick="resetForm()" data-i18n="success_reset">Send Another Request</button>
                 </div>
             </div>
 
             <div class="booking-info">
                 <div class="info-card">
                     <i class="fas fa-phone-alt"></i>
-                    <h4>Call Us</h4>
-                    <p>694 658 769</p>
-                    <span>Available 9AM - 8PM</span>
+                    <h4 data-i18n="info_call">Call Us</h4>
+                    <p data-i18n="nav_phone">694 658 769</p>
+                    <span data-i18n="info_call_time">Available 9AM - 8PM</span>
                 </div>
                 <div class="info-card">
                     <i class="fas fa-envelope"></i>
-                    <h4>Email Us</h4>
+                    <h4 data-i18n="info_email">Email Us</h4>
                     <p>bookings@saphirgroup.com</p>
-                    <span>We reply within 24h</span>
+                    <span data-i18n="info_email_time">We reply within 24h</span>
                 </div>
                 <div class="info-card">
                     <i class="fas fa-map-marker-alt"></i>
-                    <h4>Visit Us</h4>
+                    <h4 data-i18n="info_visit">Visit Us</h4>
                     <p>Royal Avenue, Plaza District</p>
-                    <span>Viewings by appointment</span>
+                    <span data-i18n="info_visit_time">Viewings by appointment</span>
                 </div>
                 <div class="info-card">
                     <i class="fas fa-clock"></i>
-                    <h4>Opening Hours</h4>
-                    <p>Terrasse Lounge</p>
-                    <span>Open Daily</span>
-                    <p class="hours-detail">Event Halls: By Reservation</p>
+                    <h4 data-i18n="info_hours">Opening Hours</h4>
+                    <p data-i18n="info_hours_lounge">Terrasse Lounge</p>
+                    <span data-i18n="info_hours_daily">Open Daily</span>
+                    <p class="hours-detail" data-i18n="info_hours_events">Event Halls: By Reservation</p>
                 </div>
             </div>
         </div>
@@ -545,8 +552,8 @@
     <!-- Map Section -->
     <section class="map-section" id="location">
         <div class="map-header">
-            <h2 class="map-title">Find Us</h2>
-            <p class="map-subtitle">Visit our venue for a personal tour</p>
+            <h2 class="map-title" data-i18n="map_title">Find Us</h2>
+            <p class="map-subtitle" data-i18n="map_subtitle">Visit our venue for a personal tour</p>
         </div>
         <div class="map-container">
             <iframe 
@@ -563,13 +570,13 @@
             <div class="map-address">
                 <i class="fas fa-map-marker-alt"></i>
                 <div>
-                    <strong>SAPHIR GROUP</strong>
-                    <p>Douala, Cameroon</p>
+                    <strong data-i18n="map_address_title">SAPHIR GROUP</strong>
+                    <p data-i18n="map_address_city">Douala, Cameroon</p>
                 </div>
             </div>
             <a href="https://www.google.com/maps/dir//SAPHIR+GROUP,+0000,+Douala/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x10610d5e7992a403:0x1dbd11e277565a51?sa=X&ved=1t:57443&ictx=111" target="_blank" class="map-directions">
                 <i class="fas fa-directions"></i>
-                Get Directions
+                <span data-i18n="map_directions">Get Directions</span>
             </a>
         </div>
     </section>
@@ -597,7 +604,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="footer-logo">SAPHIR<span>GROUP</span></div>
-                    <p class="footer-description">Creating magical moments and unforgettable celebrations in Douala. Your premier destination for luxury events.</p>
+                    <p class="footer-description" data-i18n="footer_description">Creating magical moments and unforgettable celebrations in Douala. Your premier destination for luxury events.</p>
                     <div class="footer-social">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -605,41 +612,42 @@
                     </div>
                 </div>
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h4 data-i18n="footer_quicklinks">Quick Links</h4>
                     <ul>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#pricing">Packages</a></li>
-                        <li><a href="#booking">Book Now</a></li>
+                        <li><a href="#about" data-i18n="nav_about">About Us</a></li>
+                        <li><a href="#gallery" data-i18n="nav_gallery">Gallery</a></li>
+                        <li><a href="#pricing" data-i18n="nav_packages">Packages</a></li>
+                        <li><a href="#booking" data-i18n="nav_book">Book Now</a></li>
                     </ul>
                 </div>
                 <div class="footer-services">
-                    <h4>Our Services</h4>
+                    <h4 data-i18n="footer_services">Our Services</h4>
                     <ul>
-                        <li>Wedding Planning</li>
-                        <li>Birthday Parties</li>
-                        <li>Corporate Events</li>
-                        <li>VIP Decoration</li>
-                        <li>Catering Service</li>
+                        <li data-i18n="footer_service_wedding">Wedding Planning</li>
+                        <li data-i18n="footer_service_birthday">Birthday Parties</li>
+                        <li data-i18n="footer_service_corporate">Corporate Events</li>
+                        <li data-i18n="footer_service_vip">VIP Decoration</li>
+                        <li data-i18n="footer_service_catering">Catering Service</li>
                     </ul>
                 </div>
                 <div class="footer-contact">
-                    <h4>Contact Info</h4>
+                    <h4 data-i18n="footer_contact">Contact Info</h4>
                     <ul>
-                        <li><i class="fas fa-phone"></i> 694 658 769</li>
+                        <li><i class="fas fa-phone"></i> <span data-i18n="nav_phone">694 658 769</span></li>
                         <li><i class="fas fa-envelope"></i> bookings@saphirgroup.com</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Makepe, Douala, Cameroon</li>
-                        <li><i class="fas fa-clock"></i> Open Daily</li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_contact_address">Makepe, Douala, Cameroon</span></li>
+                        <li><i class="fas fa-clock"></i> <span data-i18n="footer_contact_hours">Open Daily</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Saphir Group. All rights reserved.</p>
-                <p>Designed with <i class="fas fa-heart"></i> for your special moments</p>
+                <p data-i18n="footer_copyright">&copy; 2024 Saphir Group. All rights reserved.</p>
+                <p><span data-i18n="footer_design">Designed with</span> <i class="fas fa-heart"></i> <span data-i18n="footer_love">for your special moments</span></p>
             </div>
         </div>
     </footer>
 
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
