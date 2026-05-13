@@ -17,6 +17,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-main);
     overflow-x: hidden;
+    padding-top: 80px;
 }
 
 /* Navbar */
@@ -25,7 +26,15 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 25px 8%;
-    background: transparent;
+    background: rgba(252, 249, 246, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
 }
 
 .logo {
@@ -108,20 +117,20 @@ body {
 }
 
 /* Mobile Menu Dropdown */
-.nav-links.mobile-active {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    left: 5%;
-    right: 5%;
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-    gap: 5px;
-    z-index: 1000;
-}
+    .nav-links.mobile-active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 5%;
+        right: 5%;
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        gap: 5px;
+        z-index: 1000;
+    }
 
 .nav-links.mobile-active li {
     width: 100%;
@@ -1427,20 +1436,31 @@ p {
    ===================== */
 @media (max-width: 768px) {
 
-    /* --- Navbar --- */
-    .navbar { padding: 15px 5%; position: relative; }
+    /* --- Navbar Mobile --- */
+    .navbar { 
+        padding: 12px 4%;
+        position: fixed;
+        top: 0;
+    }
+    body {
+        padding-top: 60px;
+    }
     .nav-links { display: none; }
     .nav-links.mobile-active {
         display: flex;
         flex-direction: column;
-        position: absolute;
-        top: 70px; left: 0; right: 0;
+        position: fixed;
+        top: 60px;
+        left: 4%;
+        right: 4%;
         background: white;
-        padding: 20px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        gap: 15px;
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        gap: 3px;
         z-index: 1000;
-        border-radius: 0 0 12px 12px;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
     }
     .mobile-menu-btn {
         display: flex;
